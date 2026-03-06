@@ -2,30 +2,48 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  /*background: linear-gradient(135deg, #74ebd5, #acb6e5);*/
+  background-image: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app {
   width: 100%;
-  margin: 0 auto;
+  max-width: 1500px;
+  margin: auto;
   padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  text-align: center;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .search-bar {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .search-bar input {
+  font-size: 15px;
   padding: 10px;
   width: 280px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid #777;
 }
 
@@ -35,24 +53,27 @@ h1 {
   background: green;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: space-evenly;
 }
 .card {
-  width: 280px; /* FIXED WIDTH */
+  width: 280px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
-
+.card:hover {
+  transform: scale(1.05);
+}
 .card-img {
   width: 100%;
   height: 230px;
@@ -62,22 +83,57 @@ h1 {
 .card-actions {
   padding: 8px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
   justify-content: space-between;
 }
 
 .btn {
-  padding: 6px 10px;
+  padding: 4px 8px;
+  font-size: 13px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-.liked {
+/*.liked {
   background-color: red;
-  color: white;
-}
+  color: crimson;
+}*/
 
 .download {
-  background-color: green;
+  background-color: forestgreen;
   color: white;
+  margin-top: 4px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.download:active {
+  background-color: forestgreen;
+  color: black;
+}
+.download:hover {
+  background-color: green;
+  color: black;
+}
+.view {
+  background: orange;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 4px;
+}
+.view:hover,
+.view:active {
+  color: black;
+}
+.share {
+  background: blueviolet;
+  color: white;
+  margin-right: 10px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+.share:hover,
+.share:active {
+  color: black;
 }
